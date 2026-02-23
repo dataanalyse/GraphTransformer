@@ -1,0 +1,33 @@
+{
+  "graph_tag": "N5_chain",
+  "graph_type": "chain",
+  "num_nodes": 5,
+  "num_edges_physical": 4,
+  "num_edges_message_passing": 8,
+  "roles": [
+    "supplier",
+    "manufacturer_1",
+    "manufacturer_2",
+    "manufacturer_3",
+    "retailer"
+  ],
+  "sim_params": {
+    "T": 200,
+    "seed": 7,
+    "p_shock": 0.05,
+    "p_propagate": 0.35,
+    "p_recover": 0.25
+  },
+  "tensor_shapes": {
+    "X": [
+      199,
+      5,
+      3
+    ],
+    "Y": [
+      199,
+      5
+    ]
+  },
+  "graph_png": "data/N5_chain/seed_7/supply_chain_graph.png"
+}

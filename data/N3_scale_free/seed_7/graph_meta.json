@@ -1,0 +1,31 @@
+{
+  "graph_tag": "N3_scale_free",
+  "graph_type": "scale_free",
+  "num_nodes": 3,
+  "num_edges_physical": 2,
+  "num_edges_message_passing": 4,
+  "roles": [
+    "supplier",
+    "manufacturer_1",
+    "retailer"
+  ],
+  "sim_params": {
+    "T": 200,
+    "seed": 7,
+    "p_shock": 0.05,
+    "p_propagate": 0.35,
+    "p_recover": 0.25
+  },
+  "tensor_shapes": {
+    "X": [
+      199,
+      3,
+      3
+    ],
+    "Y": [
+      199,
+      3
+    ]
+  },
+  "graph_png": "data/N3_scale_free/seed_7/supply_chain_graph.png"
+}

@@ -1,0 +1,37 @@
+graph:
+  type: chain
+  sizes: [3, 5, 7]
+
+seeds: [7]
+
+simulator:
+  T: 200
+  p_shock: 0.05
+  p_propagate: 0.35
+  p_recover: 0.25
+
+training:
+  baseline:
+    enabled: true
+    lr: 0.05
+    epochs: 200
+    eval_every: 50
+  gcn:
+    enabled: true
+    lr: 0.01
+    epochs: 300
+    eval_every: 50
+    hidden_dim: 16
+  graph_transformer:
+    enabled: true
+    lr: 0.005
+    epochs: 300
+    eval_every: 50
+    d_model: 32
+    num_heads: 4
+    num_layers: 2
+    ff_dim: 64
+    dropout: 0.1
+
+data_root: data
+run_root: runs

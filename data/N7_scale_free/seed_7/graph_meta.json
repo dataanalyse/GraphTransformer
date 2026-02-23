@@ -1,0 +1,35 @@
+{
+  "graph_tag": "N7_scale_free",
+  "graph_type": "scale_free",
+  "num_nodes": 7,
+  "num_edges_physical": 10,
+  "num_edges_message_passing": 20,
+  "roles": [
+    "supplier",
+    "manufacturer_1",
+    "manufacturer_2",
+    "manufacturer_3",
+    "manufacturer_4",
+    "manufacturer_5",
+    "retailer"
+  ],
+  "sim_params": {
+    "T": 200,
+    "seed": 7,
+    "p_shock": 0.05,
+    "p_propagate": 0.35,
+    "p_recover": 0.25
+  },
+  "tensor_shapes": {
+    "X": [
+      199,
+      7,
+      3
+    ],
+    "Y": [
+      199,
+      7
+    ]
+  },
+  "graph_png": "data/N7_scale_free/seed_7/supply_chain_graph.png"
+}

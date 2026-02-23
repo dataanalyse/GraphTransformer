@@ -1,0 +1,58 @@
+{
+  "config": {
+    "script": "train_graph_transformer_v1.py",
+    "seed": 7,
+    "graph_type": "chain",
+    "graph_tag": "N5_chain",
+    "lr": 0.005,
+    "epochs": 300,
+    "eval_every": 50,
+    "d_model": 32,
+    "num_heads": 4,
+    "num_layers": 2,
+    "ff_dim": 64,
+    "dropout": 0.1,
+    "deterministic_algorithms": true,
+    "data_dir": "data/N5_chain/seed_7"
+  },
+  "dataset_stats": {
+    "X_shape": [
+      199,
+      5,
+      3
+    ],
+    "Y_shape": [
+      199,
+      5
+    ],
+    "num_timesteps": 199,
+    "num_nodes": 5,
+    "num_features": 3,
+    "split_t": 139,
+    "pos_weight": 0.2972620725631714,
+    "num_edges_physical": 4,
+    "num_edges_message_passing": 8,
+    "edge_index": [
+      [
+        0,
+        1,
+        1,
+        2,
+        2,
+        3,
+        3,
+        4
+      ],
+      [
+        1,
+        0,
+        2,
+        1,
+        3,
+        2,
+        4,
+        3
+      ]
+    ]
+  }
+}

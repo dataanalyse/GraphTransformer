@@ -1,0 +1,31 @@
+{
+  "config": {
+    "script": "train_baseline_v1.py",
+    "seed": 7,
+    "graph_type": "chain",
+    "graph_tag": "N7_chain",
+    "lr": 0.05,
+    "epochs": 200,
+    "eval_every": 50,
+    "deterministic_algorithms": true,
+    "data_dir": "data\\N7_chain\\seed_7"
+  },
+  "dataset_stats": {
+    "X_shape": [
+      199,
+      7,
+      3
+    ],
+    "Y_shape": [
+      199,
+      7
+    ],
+    "num_timesteps": 199,
+    "num_nodes": 7,
+    "num_features": 3,
+    "split_t": 139,
+    "pos_weight": 0.27681025862693787,
+    "num_edges_physical": 6,
+    "num_edges_message_passing": 12
+  }
+}

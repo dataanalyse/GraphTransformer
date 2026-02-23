@@ -1,0 +1,21 @@
+{
+  "config": {
+    "script": "train_baseline_v1.py",
+    "lr": 0.05,
+    "epochs": 200,
+    "eval_every": 50
+  },
+  "dataset_stats": {
+    "X_shape": [
+      199,
+      3,
+      3
+    ],
+    "Y_shape": [
+      199,
+      3
+    ],
+    "split_t": 139,
+    "pos_weight": 1.8028168678283691
+  }
+}
