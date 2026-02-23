@@ -5,3 +5,4 @@ __pycache__/
 *.pt
 *.png
 *.csv
+!runs/results_summary.csv
