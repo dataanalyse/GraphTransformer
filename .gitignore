@@ -3,6 +3,5 @@ __pycache__/
 *.pyc
 .ipynb_checkpoints/
 *.pt
-*.png
 *.csv
 !runs/results_summary.csv

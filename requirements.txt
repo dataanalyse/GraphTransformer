@@ -1,0 +1,10 @@
+# Core dependencies for GraphTransformer project
+matplotlib
+networkx
+numpy
+pandas
+PyYAML
+torch
+wrds
+
+python-dotenv

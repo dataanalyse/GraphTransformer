@@ -1,4 +1,5 @@
 import argparse
+import os
 import subprocess
 import sys
 from pathlib import Path
@@ -8,7 +9,10 @@ import yaml
 
 def run_cmd(cmd):
     print(">>", " ".join(cmd))
-    subprocess.run(cmd, check=True)
+    env = os.environ.copy()
+    env.setdefault("MPLCONFIGDIR", "/tmp/mplconfig")
+    env.setdefault("MPLBACKEND", "Agg")
+    subprocess.run(cmd, check=True, env=env)
 
 
 def main() -> None:
@@ -148,6 +152,82 @@ def main() -> None:
                         run_root,
                         "--experiment_name",
                         "graph_transformer",
+                    ]
+                )
+
+            if train.get("graph_transformer_pyg", {}).get("enabled", False):
+                gt = train["graph_transformer_pyg"]
+                run_cmd(
+                    [
+                        python,
+                        "train_graph_transformer_pyg.py",
+                        "--seed",
+                        str(seed),
+                        "--graph_type",
+                        graph_type,
+                        "--graph_tag",
+                        graph_tag,
+                        "--data_dir",
+                        str(data_dir),
+                        "--lr",
+                        str(gt["lr"]),
+                        "--epochs",
+                        str(gt["epochs"]),
+                        "--eval_every",
+                        str(gt["eval_every"]),
+                        "--hidden_dim",
+                        str(gt["hidden_dim"]),
+                        "--num_heads",
+                        str(gt["num_heads"]),
+                        "--num_layers",
+                        str(gt["num_layers"]),
+                        "--dropout",
+                        str(gt["dropout"]),
+                        "--run_root",
+                        run_root,
+                        "--experiment_name",
+                        "graph_transformer_pyg",
+                    ]
+                )
+
+            if train.get("graphormer", {}).get("enabled", False):
+                gt = train["graphormer"]
+                run_cmd(
+                    [
+                        python,
+                        "train_graphormer_v1.py",
+                        "--seed",
+                        str(seed),
+                        "--graph_type",
+                        graph_type,
+                        "--graph_tag",
+                        graph_tag,
+                        "--data_dir",
+                        str(data_dir),
+                        "--lr",
+                        str(gt["lr"]),
+                        "--epochs",
+                        str(gt["epochs"]),
+                        "--eval_every",
+                        str(gt["eval_every"]),
+                        "--d_model",
+                        str(gt["d_model"]),
+                        "--num_heads",
+                        str(gt["num_heads"]),
+                        "--num_layers",
+                        str(gt["num_layers"]),
+                        "--ff_dim",
+                        str(gt["ff_dim"]),
+                        "--dropout",
+                        str(gt["dropout"]),
+                        "--max_dist",
+                        str(gt["max_dist"]),
+                        "--max_degree",
+                        str(gt["max_degree"]),
+                        "--run_root",
+                        run_root,
+                        "--experiment_name",
+                        "graphormer",
                     ]
                 )
 

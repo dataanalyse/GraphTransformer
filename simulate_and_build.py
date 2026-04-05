@@ -7,7 +7,7 @@ import networkx as nx
 import pandas as pd
 import torch
 
-from graph_factory import build_graph, to_message_passing_edge_index
+from graph_factory import build_graph, to_directed_edge_index, to_message_passing_edge_index
 from sc_sim_v0 import SimParams, simulate
 
 
@@ -93,8 +93,11 @@ def main() -> None:
     sys_df.to_csv(sys_csv, index=False)
 
     X, Y = build_tensors(node_csv, out_dir)
-    edge_index = to_message_passing_edge_index(G)
-    torch.save(edge_index, out_dir / "edge_index.pt")
+    directed_edge_index = to_directed_edge_index(G)
+    message_passing_edge_index = to_message_passing_edge_index(G)
+    torch.save(directed_edge_index, out_dir / "edge_index.pt")
+    torch.save(directed_edge_index, out_dir / "edge_index_directed.pt")
+    torch.save(message_passing_edge_index, out_dir / "edge_index_message_passing.pt")
     graph_png = out_dir / "supply_chain_graph.png"
     save_graph_png(G, graph_png, args.graph_type, args.seed)
 
@@ -103,7 +106,11 @@ def main() -> None:
         "graph_type": args.graph_type,
         "num_nodes": args.num_nodes,
         "num_edges_physical": int(G.number_of_edges()),
-        "num_edges_message_passing": int(edge_index.shape[1]),
+        "num_edges_directed": int(directed_edge_index.shape[1]),
+        "num_edges_message_passing": int(message_passing_edge_index.shape[1]),
+        "edge_index_default": "edge_index.pt",
+        "edge_index_directed": "edge_index_directed.pt",
+        "edge_index_message_passing": "edge_index_message_passing.pt",
         "roles": [G.nodes[i]["role"] for i in sorted(G.nodes())],
         "sim_params": {
             "T": args.T,

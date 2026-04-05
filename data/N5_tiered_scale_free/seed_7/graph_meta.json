@@ -29,5 +29,10 @@
       5
     ]
   },
-  "graph_png": "data/N5_tiered_scale_free/seed_7/supply_chain_graph.png"
+  "graph_png": "data/N5_tiered_scale_free/seed_7/supply_chain_graph.png",
+  "num_edges_directed": 5,
+  "edge_index_default": "edge_index.pt",
+  "edge_index_directed": "edge_index_directed.pt",
+  "edge_index_message_passing": "edge_index_message_passing.pt",
+  "edge_index_message_passing_legacy": "edge_index_message_passing_legacy.pt"
 }

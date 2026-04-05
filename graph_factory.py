@@ -136,10 +136,20 @@ def build_graph(
     raise ValueError(f"Unsupported graph_type: {graph_type}")
 
 
+def _to_edge_index(edges: List[Tuple[int, int]]) -> torch.Tensor:
+    if not edges:
+        return torch.empty((2, 0), dtype=torch.long)
+    return torch.tensor(edges, dtype=torch.long).t().contiguous()
+
+
+def to_directed_edge_index(G: nx.DiGraph) -> torch.Tensor:
+    directed_edges: List[Tuple[int, int]] = [(u, v) for u, v in G.edges()]
+    return _to_edge_index(directed_edges)
+
+
 def to_message_passing_edge_index(G: nx.DiGraph) -> torch.Tensor:
     undirected_edges: List[Tuple[int, int]] = []
     for u, v in G.edges():
         undirected_edges.append((u, v))
         undirected_edges.append((v, u))
-    edge_index = torch.tensor(undirected_edges, dtype=torch.long).t().contiguous()
-    return edge_index
+    return _to_edge_index(undirected_edges)
