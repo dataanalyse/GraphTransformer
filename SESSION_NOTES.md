@@ -66,6 +66,7 @@ Interpreting WRDS/Compustat supplier-customer related tables for possible supply
   - gcn: `0.8142`
   - graph_transformer: `0.8650`
   - graphormer: `0.8642` with best `0.8708`
+- 2026-04-05: Repo was reorganized for the next phase. The completed first research line now lives under `v1_archive/`, while `v2/` is the clean workspace for the next graph-centric direction. Root now keeps only repo-level continuity files plus the two top-level work areas.
 
 ## Next Step Candidates
 - Compare `wrds_seg_customer` with other candidate tables in the catalog.
