@@ -1,0 +1,31 @@
+{
+  "config": {
+    "script": "train_baseline_v1.py",
+    "seed": 3,
+    "graph_type": "tiered_scale_free",
+    "graph_tag": "N20_tiered_scale_free",
+    "lr": 0.05,
+    "epochs": 200,
+    "eval_every": 50,
+    "deterministic_algorithms": true,
+    "data_dir": "data/N20_tiered_scale_free/seed_3"
+  },
+  "dataset_stats": {
+    "X_shape": [
+      199,
+      20,
+      3
+    ],
+    "Y_shape": [
+      199,
+      20
+    ],
+    "num_timesteps": 199,
+    "num_nodes": 20,
+    "num_features": 3,
+    "split_t": 139,
+    "pos_weight": 0.294730007648468,
+    "num_edges_physical": 33,
+    "num_edges_message_passing": 66
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "graph_tag": "N20_tiered_scale_free",
+  "graph_type": "tiered_scale_free",
+  "num_nodes": 20,
+  "num_edges_physical": 35,
+  "num_edges_directed": 35,
+  "num_edges_message_passing": 70,
+  "edge_index_default": "edge_index.pt",
+  "edge_index_directed": "edge_index_directed.pt",
+  "edge_index_message_passing": "edge_index_message_passing.pt",
+  "roles": [
+    "supplier",
+    "manufacturer_1",
+    "manufacturer_2",
+    "manufacturer_3",
+    "manufacturer_4",
+    "manufacturer_5",
+    "manufacturer_6",
+    "manufacturer_7",
+    "manufacturer_8",
+    "manufacturer_9",
+    "manufacturer_10",
+    "manufacturer_11",
+    "manufacturer_12",
+    "manufacturer_13",
+    "manufacturer_14",
+    "manufacturer_15",
+    "manufacturer_16",
+    "manufacturer_17",
+    "manufacturer_18",
+    "retailer"
+  ],
+  "sim_params": {
+    "T": 200,
+    "seed": 2,
+    "p_shock": 0.05,
+    "p_propagate": 0.35,
+    "p_recover": 0.25
+  },
+  "tensor_shapes": {
+    "X": [
+      199,
+      20,
+      3
+    ],
+    "Y": [
+      199,
+      20
+    ]
+  },
+  "graph_png": "data/N20_tiered_scale_free/seed_2/supply_chain_graph.png"
+}
