@@ -1,0 +1,41 @@
+graph_target_name,graph_target_desc,model_family,graph_tag,num_nodes,seeds,mean_best_test_mae,std_best_test_mae,mean_percent_best_test_error,std_percent_best_test_error,mean_best_epoch
+component_fraction,Number of weakly connected healthy components divided by N at t+5,baseline,N20_tiered_scale_free,20,3,0.034070626522103936,0.012574518284527214,51.23442553285216,17.79205985392656,300.0
+component_fraction,Number of weakly connected healthy components divided by N at t+5,gcn,N20_tiered_scale_free,20,3,0.02857251216967897,0.013882417696168908,43.46172717484325,22.242294523275234,300.0
+component_fraction,Number of weakly connected healthy components divided by N at t+5,graph_transformer,N20_tiered_scale_free,20,3,0.0246173152700066,0.009461078231398943,36.50637793697217,10.936099107570557,300.0
+component_fraction,Number of weakly connected healthy components divided by N at t+5,graphormer,N20_tiered_scale_free,20,3,0.023008050086597565,0.01473172663359217,33.809729434030764,21.90565433903918,300.0
+component_fraction,Number of weakly connected healthy components divided by N at t+5,baseline,N40_tiered_scale_free,40,3,0.06687078873316443,0.02969810711396454,159.1685555419845,47.57212385575225,300.0
+component_fraction,Number of weakly connected healthy components divided by N at t+5,gcn,N40_tiered_scale_free,40,3,0.026198333129286735,0.0028269306005194827,65.2340129736499,11.209732242930322,300.0
+component_fraction,Number of weakly connected healthy components divided by N at t+5,graph_transformer,N40_tiered_scale_free,40,3,0.019907719766100198,0.0017663479343090552,49.75172820303047,10.150984774685835,300.0
+component_fraction,Number of weakly connected healthy components divided by N at t+5,graphormer,N40_tiered_scale_free,40,3,0.0190573120489716,0.006268572162363416,45.85224622173235,8.101847973184848,300.0
+diameter_fraction,Diameter of the largest healthy component divided by (N-1) at t+5,baseline,N20_tiered_scale_free,20,3,0.054115934918324136,0.015488648964572534,20.45105609371497,6.6264204207073485,300.0
+diameter_fraction,Diameter of the largest healthy component divided by (N-1) at t+5,gcn,N20_tiered_scale_free,20,3,0.037727566435933065,0.009486608832372487,14.068179529094266,2.946013423575066,300.0
+diameter_fraction,Diameter of the largest healthy component divided by (N-1) at t+5,graph_transformer,N20_tiered_scale_free,20,3,0.035708095878362635,0.009099281136544022,13.32261646213288,2.870404494817965,300.0
+diameter_fraction,Diameter of the largest healthy component divided by (N-1) at t+5,graphormer,N20_tiered_scale_free,20,3,0.0386276779075463,0.007926282623927595,14.470852159369246,2.7107886247538993,300.0
+diameter_fraction,Diameter of the largest healthy component divided by (N-1) at t+5,baseline,N40_tiered_scale_free,40,3,0.0757473011811574,0.027385747684026924,48.7727970928374,15.654513474987,300.0
+diameter_fraction,Diameter of the largest healthy component divided by (N-1) at t+5,gcn,N40_tiered_scale_free,40,3,0.026945132762193635,0.006276927238650569,17.457288112103146,3.563313045226627,300.0
+diameter_fraction,Diameter of the largest healthy component divided by (N-1) at t+5,graph_transformer,N40_tiered_scale_free,40,3,0.019113861645261434,0.0007700581806075413,12.45637912770308,0.6783666869983674,300.0
+diameter_fraction,Diameter of the largest healthy component divided by (N-1) at t+5,graphormer,N40_tiered_scale_free,40,3,0.020218186701337435,0.0008780038105449639,13.182111624734212,0.8881109262788447,300.0
+edge_survival_ratio,Healthy-subgraph edge count divided by original edge count at t+5,baseline,N20_tiered_scale_free,20,3,0.19345564643541965,0.08615902616337226,35.01882182200605,25.17395355499725,300.0
+edge_survival_ratio,Healthy-subgraph edge count divided by original edge count at t+5,gcn,N20_tiered_scale_free,20,3,0.16690650333960846,0.05823010964488149,29.588082557268404,17.67118632083573,300.0
+edge_survival_ratio,Healthy-subgraph edge count divided by original edge count at t+5,graph_transformer,N20_tiered_scale_free,20,3,0.15833302587270734,0.05953742912925489,28.131776160033684,17.201635145667012,300.0
+edge_survival_ratio,Healthy-subgraph edge count divided by original edge count at t+5,graphormer,N20_tiered_scale_free,20,3,0.16059385488430652,0.05742667881331345,28.499034864591312,17.193967494072254,300.0
+edge_survival_ratio,Healthy-subgraph edge count divided by original edge count at t+5,baseline,N40_tiered_scale_free,40,3,0.17122061550617218,0.05154919441563669,28.591191887213046,9.598237632487923,300.0
+edge_survival_ratio,Healthy-subgraph edge count divided by original edge count at t+5,gcn,N40_tiered_scale_free,40,3,0.14331189543008796,0.036402837068768706,23.699539934455775,5.800377418837205,300.0
+edge_survival_ratio,Healthy-subgraph edge count divided by original edge count at t+5,graph_transformer,N40_tiered_scale_free,40,3,0.13687316824992493,0.034252011729214604,22.60526898071169,5.207866507824486,300.0
+edge_survival_ratio,Healthy-subgraph edge count divided by original edge count at t+5,graphormer,N40_tiered_scale_free,40,3,0.1345388665795326,0.03147246709539784,22.220673169448332,4.7293054857269174,300.0
+lcc_fraction,LCC fraction of the healthy-node subgraph at t+5,baseline,N20_tiered_scale_free,20,3,0.16028364002704618,0.08003377790875198,23.05026720943508,15.198177986229055,300.0
+lcc_fraction,LCC fraction of the healthy-node subgraph at t+5,gcn,N20_tiered_scale_free,20,3,0.12774822364250812,0.04632707723368973,18.050476158970138,9.298086930323723,300.0
+lcc_fraction,LCC fraction of the healthy-node subgraph at t+5,graph_transformer,N20_tiered_scale_free,20,3,0.1182396238048871,0.04247459154650884,16.675837385614773,8.386381623545159,300.0
+lcc_fraction,LCC fraction of the healthy-node subgraph at t+5,graphormer,N20_tiered_scale_free,20,3,0.11078721160689986,0.037172862991781984,15.549664685958085,7.340746587646292,300.0
+lcc_fraction,LCC fraction of the healthy-node subgraph at t+5,baseline,N40_tiered_scale_free,40,3,0.14188169191280997,0.05507938340303044,19.122077415122135,7.809550202161071,300.0
+lcc_fraction,LCC fraction of the healthy-node subgraph at t+5,gcn,N40_tiered_scale_free,40,3,0.10188851008812583,0.014932623831487824,13.630082211538605,2.0754975826859017,300.0
+lcc_fraction,LCC fraction of the healthy-node subgraph at t+5,graph_transformer,N40_tiered_scale_free,40,3,0.10205965364972748,0.015041328758165738,13.652615097079318,2.086624036201438,300.0
+lcc_fraction,LCC fraction of the healthy-node subgraph at t+5,graphormer,N40_tiered_scale_free,40,3,0.10046166429917014,0.010668576636655682,13.422772272063428,1.316700253799604,300.0
+lcc_trajectory,"Y_lcc_traj[t, h] = LCC fraction at t+(h+1) for h=0..4",baseline,N20_tiered_scale_free,20,3,0.13436268766721088,0.05889822957279996,18.988153237922266,11.766120260989345,300.0
+lcc_trajectory,"Y_lcc_traj[t, h] = LCC fraction at t+(h+1) for h=0..4",gcn,N20_tiered_scale_free,20,3,0.11521970232327777,0.05123876186479617,16.29593612999145,10.22381473516538,300.0
+lcc_trajectory,"Y_lcc_traj[t, h] = LCC fraction at t+(h+1) for h=0..4",graph_transformer,N20_tiered_scale_free,20,3,0.10068513204654055,0.039151479765087656,14.140835844037868,8.003669536912462,300.0
+lcc_trajectory,"Y_lcc_traj[t, h] = LCC fraction at t+(h+1) for h=0..4",graphormer,N20_tiered_scale_free,20,3,0.10061456759770708,0.030102557660228003,13.992468965979633,6.747331602476578,300.0
+lcc_trajectory,"Y_lcc_traj[t, h] = LCC fraction at t+(h+1) for h=0..4",baseline,N40_tiered_scale_free,40,3,0.13849406192700062,0.04019740752442054,18.58459169022567,5.680133426824789,300.0
+lcc_trajectory,"Y_lcc_traj[t, h] = LCC fraction at t+(h+1) for h=0..4",gcn,N40_tiered_scale_free,40,3,0.10295019547144567,0.021964511083900833,13.760310041353572,2.9586681810473596,300.0
+lcc_trajectory,"Y_lcc_traj[t, h] = LCC fraction at t+(h+1) for h=0..4",graph_transformer,N40_tiered_scale_free,40,3,0.08898004144430156,0.011489563591222844,11.882110485206868,1.380929123938036,300.0
+lcc_trajectory,"Y_lcc_traj[t, h] = LCC fraction at t+(h+1) for h=0..4",graphormer,N40_tiered_scale_free,40,3,0.09170335779587424,0.014962315455020038,12.22719978153799,1.6533997484935867,300.0

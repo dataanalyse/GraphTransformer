@@ -1,0 +1,9 @@
+graph_target_name,graph_target_desc,model_family,graph_tag,num_nodes,seeds,mean_best_test_mae,std_best_test_mae,mean_percent_best_test_error,std_percent_best_test_error,mean_best_epoch
+lcc_trajectory,"Y_lcc_traj[t, h] = LCC fraction at t+(h+1) for h=0..4",baseline,N20_tiered_scale_free,20,3,0.13436268766721088,0.05889822957279996,18.988153237922266,11.766120260989345,300.0
+lcc_trajectory,"Y_lcc_traj[t, h] = LCC fraction at t+(h+1) for h=0..4",gcn,N20_tiered_scale_free,20,3,0.11521970232327777,0.05123876186479617,16.29593612999145,10.22381473516538,300.0
+lcc_trajectory,"Y_lcc_traj[t, h] = LCC fraction at t+(h+1) for h=0..4",graph_transformer,N20_tiered_scale_free,20,3,0.10068513204654055,0.039151479765087656,14.140835844037868,8.003669536912462,300.0
+lcc_trajectory,"Y_lcc_traj[t, h] = LCC fraction at t+(h+1) for h=0..4",graphormer,N20_tiered_scale_free,20,3,0.10061456759770708,0.030102557660228003,13.992468965979633,6.747331602476578,300.0
+lcc_trajectory,"Y_lcc_traj[t, h] = LCC fraction at t+(h+1) for h=0..4",baseline,N40_tiered_scale_free,40,3,0.13849406192700062,0.04019740752442054,18.58459169022567,5.680133426824789,300.0
+lcc_trajectory,"Y_lcc_traj[t, h] = LCC fraction at t+(h+1) for h=0..4",gcn,N40_tiered_scale_free,40,3,0.10295019547144567,0.021964511083900833,13.760310041353572,2.9586681810473596,300.0
+lcc_trajectory,"Y_lcc_traj[t, h] = LCC fraction at t+(h+1) for h=0..4",graph_transformer,N40_tiered_scale_free,40,3,0.08898004144430156,0.011489563591222844,11.882110485206868,1.380929123938036,300.0
+lcc_trajectory,"Y_lcc_traj[t, h] = LCC fraction at t+(h+1) for h=0..4",graphormer,N40_tiered_scale_free,40,3,0.09170335779587424,0.014962315455020038,12.22719978153799,1.6533997484935867,300.0

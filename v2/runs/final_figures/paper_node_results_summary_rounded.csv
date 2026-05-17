@@ -1,0 +1,9 @@
+num_nodes,model_family,mean_best_test_acc,std_best_test_acc
+20,baseline,0.707,0.036
+20,gcn,0.699,0.065
+20,graph_transformer,0.752,0.080
+20,graphormer,0.746,0.088
+40,baseline,0.688,0.015
+40,gcn,0.690,0.035
+40,graph_transformer,0.680,0.041
+40,graphormer,0.690,0.016

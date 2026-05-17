@@ -4,4 +4,19 @@ __pycache__/
 .ipynb_checkpoints/
 *.pt
 *.csv
+Spring 2026 Paper.docx
+~$ring 2026 Paper.docx
+
+# Generated experiment artifacts
+v2/data/
+v2/final_runs/
+v2/compute_benchmark_runs/
+v2/runs/*
+
+# Keep only paper-facing outputs from final_figures
+!v2/runs/final_figures/
+!v2/runs/final_figures/*.png
+!v2/runs/final_figures/*.csv
+
+# Historical exception
 !runs/results_summary.csv

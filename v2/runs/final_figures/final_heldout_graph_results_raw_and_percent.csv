@@ -1,0 +1,33 @@
+graph_target_name,graph_target_desc,model_family,graph_tag,num_nodes,seeds,mean_best_test_mae,std_best_test_mae,mean_percent_best_test_error,std_percent_best_test_error,mean_best_epoch
+component_fraction,Number of weakly connected healthy components divided by N at t+5,baseline,N20_tiered_scale_free,20,1,0.0302692335098981,,47.60080467521936,,300.0
+component_fraction,Number of weakly connected healthy components divided by N at t+5,gcn,N20_tiered_scale_free,20,1,0.0199024360626935,,31.29818174191701,,300.0
+component_fraction,Number of weakly connected healthy components divided by N at t+5,graph_transformer,N20_tiered_scale_free,20,1,0.0150671619921922,,23.69432429683762,,300.0
+component_fraction,Number of weakly connected healthy components divided by N at t+5,graphormer,N20_tiered_scale_free,20,1,0.0145229520276188,,22.8385103490713,,300.0
+component_fraction,Number of weakly connected healthy components divided by N at t+5,baseline,N40_tiered_scale_free,40,1,0.039475679397583,,81.1357829870293,,300.0
+component_fraction,Number of weakly connected healthy components divided by N at t+5,gcn,N40_tiered_scale_free,40,1,0.027126844972372,,55.75477966152296,,300.0
+component_fraction,Number of weakly connected healthy components divided by N at t+5,graph_transformer,N40_tiered_scale_free,40,1,0.0264720991253852,,54.40905698458703,,300.0
+component_fraction,Number of weakly connected healthy components divided by N at t+5,graphormer,N40_tiered_scale_free,40,1,0.0253792330622673,,52.16285007734247,,300.0
+diameter_fraction,Diameter of the largest healthy component divided by (N-1) at t+5,baseline,N20_tiered_scale_free,20,1,0.0481348074972629,,17.21423435380624,,300.0
+diameter_fraction,Diameter of the largest healthy component divided by (N-1) at t+5,gcn,N20_tiered_scale_free,20,1,0.0454507581889629,,16.25434989155146,,300.0
+diameter_fraction,Diameter of the largest healthy component divided by (N-1) at t+5,graph_transformer,N20_tiered_scale_free,20,1,0.044353500008583,,15.86194239174449,,300.0
+diameter_fraction,Diameter of the largest healthy component divided by (N-1) at t+5,graphormer,N20_tiered_scale_free,20,1,0.0446098037064075,,15.953603128527305,,300.0
+diameter_fraction,Diameter of the largest healthy component divided by (N-1) at t+5,baseline,N40_tiered_scale_free,40,1,0.0355954430997371,,23.518968291080803,,300.0
+diameter_fraction,Diameter of the largest healthy component divided by (N-1) at t+5,gcn,N40_tiered_scale_free,40,1,0.0252494476735591,,16.683061299105624,,300.0
+diameter_fraction,Diameter of the largest healthy component divided by (N-1) at t+5,graph_transformer,N40_tiered_scale_free,40,1,0.0248084124177694,,16.391656183931115,,300.0
+diameter_fraction,Diameter of the largest healthy component divided by (N-1) at t+5,graphormer,N40_tiered_scale_free,40,1,0.0240394081920385,,15.883552212588622,,300.0
+edge_survival_ratio,Healthy-subgraph edge count divided by original edge count at t+5,baseline,N20_tiered_scale_free,20,1,0.1522125601768493,,23.965962873213094,,300.0
+edge_survival_ratio,Healthy-subgraph edge count divided by original edge count at t+5,gcn,N20_tiered_scale_free,20,1,0.1435446143150329,,22.60118937180195,,300.0
+edge_survival_ratio,Healthy-subgraph edge count divided by original edge count at t+5,graph_transformer,N20_tiered_scale_free,20,1,0.142778530716896,,22.480569029765817,,300.0
+edge_survival_ratio,Healthy-subgraph edge count divided by original edge count at t+5,graphormer,N20_tiered_scale_free,20,1,0.1427845507860183,,22.481516893417226,,300.0
+edge_survival_ratio,Healthy-subgraph edge count divided by original edge count at t+5,baseline,N40_tiered_scale_free,40,1,0.1420783251523971,,24.53431778199637,,300.0
+edge_survival_ratio,Healthy-subgraph edge count divided by original edge count at t+5,gcn,N40_tiered_scale_free,40,1,0.1575058251619339,,27.198363739813903,,300.0
+edge_survival_ratio,Healthy-subgraph edge count divided by original edge count at t+5,graph_transformer,N40_tiered_scale_free,40,1,0.1390763968229293,,24.015939883643888,,300.0
+edge_survival_ratio,Healthy-subgraph edge count divided by original edge count at t+5,graphormer,N40_tiered_scale_free,40,1,0.1566934585571289,,27.058082944580786,,300.0
+lcc_fraction,LCC fraction of the healthy-node subgraph at t+5,baseline,N20_tiered_scale_free,20,1,0.1250190883874893,,16.424944021327413,,300.0
+lcc_fraction,LCC fraction of the healthy-node subgraph at t+5,gcn,N20_tiered_scale_free,20,1,0.1243868097662925,,16.34187557879605,,300.0
+lcc_fraction,LCC fraction of the healthy-node subgraph at t+5,graph_transformer,N20_tiered_scale_free,20,1,0.1177487298846244,,15.469768032086337,,300.0
+lcc_fraction,LCC fraction of the healthy-node subgraph at t+5,graphormer,N20_tiered_scale_free,20,1,0.114621952176094,,15.058973572678925,,300.0
+lcc_fraction,LCC fraction of the healthy-node subgraph at t+5,baseline,N40_tiered_scale_free,40,1,0.1124322935938835,,15.621160289857974,,300.0
+lcc_fraction,LCC fraction of the healthy-node subgraph at t+5,gcn,N40_tiered_scale_free,40,1,0.1235916167497634,,17.171618527186038,,300.0
+lcc_fraction,LCC fraction of the healthy-node subgraph at t+5,graph_transformer,N40_tiered_scale_free,40,1,0.1168510988354682,,16.23510191429722,,300.0
+lcc_fraction,LCC fraction of the healthy-node subgraph at t+5,graphormer,N40_tiered_scale_free,40,1,0.1207847222685813,,16.781633166168294,,300.0
