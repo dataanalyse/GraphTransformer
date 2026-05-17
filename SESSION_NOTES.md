@@ -152,6 +152,9 @@ Interpreting WRDS/Compustat supplier-customer related tables for possible supply
   - `v2/runs/final_figures/compute_benchmark_summary.csv`
   - `v2/runs/final_figures/compute_benchmark_summary_rounded.csv`
   Reported fields: model family, best epoch, best test MAE, total runtime in seconds, seconds per epoch, parameter count, and run path.
+- 2026-05-17: Added a standalone reproduction guide for collaborators:
+  - `v2/SETUP_AND_RUN.md`
+  and linked it from `v2/README.md`. This file covers environment setup, main experiment commands, final package regeneration, and compute benchmark reproduction.
 
 ## Next Step Candidates
 - Compare `wrds_seg_customer` with other candidate tables in the catalog.

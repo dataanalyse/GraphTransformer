@@ -2,6 +2,10 @@
 
 Use this folder for the next research direction.
 
+For a clean reproduction guide, see:
+
+- `v2/SETUP_AND_RUN.md`
+
 Suggested practice:
 
 - keep new code, configs, data, and runs inside `v2/`
