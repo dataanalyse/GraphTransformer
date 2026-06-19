@@ -1,0 +1,213 @@
+region:
+  name: montgomery_county_md
+  state: maryland
+  county: Montgomery
+
+paths:
+  raw_root: v3/data/raw
+  processed_root: v3/data/processed
+
+layers:
+  - layer_key: hospitals
+    enabled: true
+    parquet_glob: hospital/hospitals.parquet
+    node_type: hospital
+    id_column: ID
+    name_column: NAME
+    county_column: COUNTY
+    state_column: STATE
+    lat_column: LATITUDE
+    lon_column: LONGITUDE
+
+  - layer_key: ems_fire
+    enabled: true
+    parquet_glob: ems_fire/ems.parquet
+    node_type: ems_fire
+    id_column: PERMANENT_IDENTIFIER
+    name_column: NAME
+    county_column: null
+    state_column: STATE
+    lat_column: null
+    lon_column: null
+    allowed_cities:
+      - Beallsville
+      - Bethesda
+      - Chevy Chase
+      - Clarksburg
+      - Damascus
+      - Derwood
+      - Gaithersburg
+      - Germantown
+      - Kensington
+      - Layhill
+      - Laytonsville
+      - North Potomac
+      - Olney
+      - Potomac
+      - Rockville
+      - Sandy Spring
+      - Silver Spring
+      - Takoma Park
+    allowed_zips:
+      - "20814"
+      - "20815"
+      - "20816"
+      - "20817"
+      - "20832"
+      - "20839"
+      - "20850"
+      - "20852"
+      - "20853"
+      - "20854"
+      - "20855"
+      - "20860"
+      - "20871"
+      - "20872"
+      - "20874"
+      - "20876"
+      - "20878"
+      - "20879"
+      - "20882"
+      - "20889"
+      - "20895"
+      - "20899"
+      - "20901"
+      - "20902"
+      - "20903"
+      - "20904"
+      - "20906"
+      - "20910"
+      - "20912"
+
+  - layer_key: power_plants
+    enabled: true
+    parquet_glob: power_plants/power_plants.parquet
+    node_type: power
+    id_column: PLANT_CODE
+    name_column: NAME
+    county_column: COUNTY
+    state_column: STATE
+    lat_column: LATITUDE
+    lon_column: LONGITUDE
+
+  - layer_key: cellular_towers
+    enabled: false
+    parquet_glob: cellular_towers/cellular.parquet
+    node_type: telecom
+    id_column: UniqSysID
+    composite_id_columns:
+      - UniqSysID
+      - latdec
+      - londec
+    name_column: Callsign
+    county_column: LocCounty
+    state_column: LocState
+    lat_column: latdec
+    lon_column: londec
+
+  - layer_key: county_telecom
+    enabled: true
+    root_key: processed_root
+    csv_glob: county_telecom_graph_ready.csv
+    node_type: telecom
+    id_column: SiteID
+    name_column: name
+    county_column: null
+    state_column: null
+    lat_column: latitude
+    lon_column: longitude
+
+  - layer_key: local_eoc
+    enabled: true
+    parquet_glob: local_eoc/local_eoc.parquet
+    node_type: emergency_management
+    id_column: ID
+    name_column: NAME
+    county_column: COUNTY
+    state_column: STATE
+    lat_column: Y
+    lon_column: X
+
+  - layer_key: public_schools
+    enabled: true
+    parquet_glob: public_schools/public_schools.parquet
+    node_type: school
+    id_column: NCESID
+    name_column: NAME
+    county_column: COUNTY
+    state_column: STATE
+    lat_column: LATITUDE
+    lon_column: LONGITUDE
+
+  - layer_key: primary_roads
+    enabled: true
+    parquet_glob: primary_roads/primary_roads.parquet
+    node_type: transportation
+    id_column: null
+    name_column: null
+    county_column: null
+    state_column: null
+    lat_column: null
+    lon_column: null
+
+dependency_rules:
+  - src_type: hospital
+    dst_type: power
+    weight: 0.9
+    delay: 2
+    max_targets: 2
+    max_distance_km: 15
+  - src_type: hospital
+    dst_type: telecom
+    weight: 0.6
+    delay: 2
+    max_targets: 2
+    max_distance_km: 12
+  - src_type: hospital
+    dst_type: ems_fire
+    weight: 0.8
+    delay: 0
+    max_targets: 2
+    max_distance_km: 12
+  - src_type: hospital
+    dst_type: emergency_management
+    weight: 0.7
+    delay: 1
+    max_targets: 1
+    max_distance_km: 25
+  - src_type: ems_fire
+    dst_type: power
+    weight: 0.5
+    delay: 0
+    max_targets: 1
+    max_distance_km: 15
+  - src_type: telecom
+    dst_type: power
+    weight: 0.8
+    delay: 1
+    max_targets: 2
+    max_distance_km: 15
+  - src_type: school
+    dst_type: power
+    weight: 0.7
+    delay: 2
+    max_targets: 1
+    max_distance_km: 12
+  - src_type: school
+    dst_type: telecom
+    weight: 0.5
+    delay: 2
+    max_targets: 1
+    max_distance_km: 12
+  - src_type: school
+    dst_type: ems_fire
+    weight: 0.4
+    delay: 1
+    max_targets: 1
+    max_distance_km: 10
+  - src_type: emergency_management
+    dst_type: ems_fire
+    weight: 0.9
+    delay: 0
+    max_targets: 5
+    max_distance_km: 30

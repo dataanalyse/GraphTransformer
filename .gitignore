@@ -1,6 +1,7 @@
 .venv/
 __pycache__/
 *.pyc
+.DS_Store
 .ipynb_checkpoints/
 *.pt
 *.csv
@@ -12,11 +13,15 @@ v2/data/
 v2/final_runs/
 v2/compute_benchmark_runs/
 v2/runs/*
+v3/data/*
+v3/runs/*
 
 # Keep only paper-facing outputs from final_figures
 !v2/runs/final_figures/
 !v2/runs/final_figures/*.png
 !v2/runs/final_figures/*.csv
+!v3/data/.gitkeep
+!v3/runs/.gitkeep
 
 # Historical exception
 !runs/results_summary.csv
