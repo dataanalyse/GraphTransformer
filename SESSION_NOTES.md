@@ -266,3 +266,4 @@ Interpreting WRDS/Compustat supplier-customer related tables for possible supply
   - `v3/data/processed/long_horizon_samples/long_horizon_summary.csv`
   - `v3/runs/figures/long_horizon_samples/long_horizon_power_samples.png`
   Key finding: `t=50` was indeed truncating recovery for additive power cases. Example `v3_126 baseline_additive`: LCC rises from `0.556` at `t=50` to `0.738` at `t=150`; failed nodes drop from `257` to `152`. Recovery remains incomplete, but the longer horizon reveals substantial late rebound that the original 50-step window hid.
+- 2026-06-19: First `v3` code push completed on branch `new_v2`. Commit `1e8528e` (`Add v3 infrastructure cascade modeling pipeline`) was created and pushed to `origin/new_v2`. Generated `v3/data/processed/*` and `v3/runs/figures/*` artifacts remain ignored; the remote now contains the full `v3` code/config/report scaffolding, updated `.gitignore`, and continuity notes without the large derived outputs.
